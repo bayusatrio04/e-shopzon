@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProvincesController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [ProductController::class, 'getProducts']);
+Route::get('/product/{asin}', [ProductController::class, 'showProductDetail'])->name('product.detail');
+
+
+
+Route::get('/provinces', [ProvincesController::class, 'index'])->name('province.index');
+
+Route::get('/city/{provinceId}', [ProvincesController::class, 'showCity'])->name('city');
+
