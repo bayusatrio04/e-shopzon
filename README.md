@@ -1,4 +1,4 @@
-# adaHEALTH
+# E-SHOPZON
 
 E-SHOPZON app. This project built with PHP framework named [Laravel](https://laravel.com/docs/10.x/installation). This project is a part of Software Engineering course in [Telkom University](https://telkomuniversity.ac.id).
 
